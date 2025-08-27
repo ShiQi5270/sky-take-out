@@ -34,4 +34,9 @@ public interface EmployeeMapper {
      * @return
      */
     List<Employee> selectPage(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 启用禁用员工账号
+     */
+    void update(Employee employee);
 }

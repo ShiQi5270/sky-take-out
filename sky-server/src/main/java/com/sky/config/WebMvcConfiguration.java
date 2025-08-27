@@ -86,6 +86,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
         //需要为消息转换器设置一个对象转换器，对象转换器可以将java对象序列为json数据
         converter.setObjectMapper(new JacksonObjectMapper());
+        //将自己的消息转换器添加到容器中
         converters.add(0,converter);
     }
 }
